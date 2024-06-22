@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>this place ___ meant</title>
+
+  <style>
+    p {
+      font-size: 0.8vw;
+    }
+
+    img {
+      position: absolute;
+    }
+
+    a {
+      font-size: 0.8vw;
+      position: absolute;
+      color: blue;
+    }
+
+    a:visited {
+      /*color: #10298f;*/
+    }
+
+    #titleHover {
+      left: 30%;
+      top: 35%;
+    }
+
+    #titleShow {
+      position: absolute;
+      left: 30%;
+      top: 25%;
+      opacity: 0;
+      transition: 1s;
+    }
+
+    #titleHover:hover+#titleShow {
+      opacity: 1;
+    }
+
+    #hgs {
+      position: absolute;
+      right: 30%;
+      bottom: 17%;
+      z-index: 1;
+      cursor: grab;
+      color: blue;
+    }
+
+    #hgsShow {
+      width: 18%;
+      left: 50%;
+      opacity: 0;
+    }
+
+    #hgs:hover+#hgsShow {
+      opacity: 1;
+    }
+
+    #hgsImage {
+      display: none;
+      background: black;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="title">
+    <a href="#" onclick="return show('root','title');" id="titleHover">
+      <p>이곳은 ___ 이런 의미였어</p>
+    </a>
+    <p id="titleShow">this place ___ meant</p>
+    <a href="#" onclick="return mapWindow();" style="right: 2%; bottom: 2%;"> &#8999;</a>
+  </div>
+
+  <div id="root" style="display:none">
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/23343039/original_2dedd63ff08a753f605e257df777776f.jpg?1693153679?bc=0" style="left: 0; top: 0; width: 30%;">
+    <p style="margin-top: 20%;">the buzz of cicadas ring in my ear ___ the night is so warm ___ i bathe in the quiet ___ feel the air's soft flesh ___ i look up towards the dark ocean above ___ the stars start to whisper to me __________________________ everything will okay</p>
+
+    <!-- cicada sounds?? -->
+
+    <!-- to 1.~ branch -->
+    <a href="#" onclick="return show('1.1','root');" style="right: 7%; bottom: 25%;">2002</a>
+    <!-- to 2.~ branch -->
+    <a href="#" onclick="return show('2.1','root');" style="right: 7%; bottom: 20%;">moon</a>
+    <!-- to 3.~ branch -->
+    <a href="#" onclick="return show('3.1','root');" style="right: 7%; bottom: 15%;">judy wig</a>
+  </div>
+
+  <div id="1.1" style="display:none">
+    <p>2002 ___ year of the horse<br>i always wished i was born on a summer night ___ my first contact with the world to feel as warm and safe as it did ___ in the womb</p>
+    <p style="margin-left: 50%;">they say we're born with all our eggs already ___ i was my mother's friend before she knew what to call me ___ i was there even ___ in my <span title="grandma's" style="cursor: help;">할머니's &#127014;</span> <a href="#" onclick="return show('2.1','1.1');" style="position: relative;">belly</a></p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/23343545/original_4c668d89304c9484082395bce80482aa.jpg?1693157671?bc=0" style="bottom: 0; width: 40%;">
+    <!-- to 1.~a branch -->
+    <a href="#" onclick="return show('1.2a','1.1');" style="right: 7%; bottom: 15%;">언니 할머니</a>
+    <!--<a href="#" onclick="return show('1.3a','1.1');" style="right: 7%; bottom: 25%;">to 1.3a</a>-->
+  </div>
+
+  <div id="1.2a" style="display:none">
+    <p style="margin-left: 30%; margin-top: 3%;">there are many <span title="grandmothers" style="cursor: help;">할머니s</span> in this story<br>the one on my mom's side ___ who raised me for a few years right after i was born ___ we call her 할머니 &#127014;<br>the one on my dad's side ___ we call philly 할머니 &#x1F028;</p>
+    <p style="margin-top: 2%;">growing up ___ we lived down the street from another older korean family<br>unrelated to us, we would still call her 언니 할머니<br>she had dark ___ cropped hair that formed the tightest curls ___ as the years went on i remember ___ how it felt seeing those curls gradually turn ___ from black to gray ___ eventually to white __________ i haven't seen her in years</p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/23614638/original_4b5592291efea36d8ef476cbcc2ff712.jpg?1694621903?bc=0" style="bottom: 0; left: 0; width: 37%;">
+    <!-- old page
+  <p style="margin-top: 21%; margin-left: 45%;">but i was born in may ___ with a misspelling on my birth certificate <br> the missing 'a' that my father forgot to write ___ i found later in life</p>
+  <p style="margin-top: 5%; margin-left: 5%;">not that the letter ___ a ___ specifically holds much signifiance to me<br>but the metaphor ___ of missing a part of yourself that you were perhaps meant to be born with<br><br>loss pre-installed</p>
+  <img src="https://d2w9rnfcy7mm78.cloudfront.net/23357029/original_635e733656ad2cfdd566f0ade8a92a7b.jpg?1693239891?bc=0" style="right: 0; top: 5%; width: 200px;"> -->
+    <!-- to 1.2~ branch -->
+    <a href="#" onclick="return show('1.2b','1.2a');" style="left: 7%; bottom: 21%;">but i could never ___ forget</a>
+  </div>
+
+  <div id="1.2b" style="display:none">
+    <p>this memory with 언니 할머니<br>sometime when there was a 1 ___ in front of my age<br>i was in the garage ___ door open ___ i could see her walking over from her end of the street ___ even now ___ i can picture her ___ her hands clasped behind her back ___ her pace meditative<br><br>she came in and asked _____ <span title="is your mom home?" style="cursor: help;">엄마 집에 있니?</span><br>this was when i couldn't speak korean very well ___ i blurted <br><br><span title="no" style="cursor: help;">아니</span><br><br>the initial shock on her face ___ i'll never forget ___ my heart sank<br>the '요' i had forgotten to put on the end ___ the formalities of my own language ___ without them ___ i disrespected her without meaning to <br>i was grateful for how she still took it nicely ___ and teased me saying 아니 again in a lighthearted tone</p>
+    <p style="margin-top: 30%; margin-left: 35%;">but this moment i replayed in my mind over ___ and over ___ ever since</p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/23614812/original_984693663b348ac9aaed7f7db366f5b9.jpg?1694622391?bc=0" style="bottom: 0; right: 0; height: 70%;">
+    <a href="#" onclick="return show('1.2c','1.2b');" style="left: 35%; bottom: 5%;">is embarrassment the greatest teacher?</a>
+  </div>
+
+  <div id="1.2c" style="display: none; background: black; position: absolute; left: 0; top: 0; width: 100%; height: 100%;">
+    <p style="color: white; margin-left: 38%; margin-top: 5%;">the feeling of <a href="#" onclick="return show('1.2c.1','1.2c');" style="position: relative; background-color: white; color: black;">shame</a> i felt that day ___ never really left me<br>i swore to myself then ___ that i'd learn ______________ my mother tongue</p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/23993796/original_c450f30b7194a6968ab6808b316fb97c.jpg?1696451149?bc=0" style="left: 40%; bottom: 0; width: 20%;">
+    <!--
+  <a href="#" onclick="return show('1.2.1','1.2c');" style="right: 7%; bottom: 25%;">as i did</a>
+  <a href="#" onclick="return show('1.2.2','1.2c');" style="right: 7%; bottom: 15%;">how it felt</a> -->
+  </div>
+
+  <div id="1.2.1" style="display:none">
+
+  </div>
+
+  <div id="1.2.2" style="display:none">
+    <!--<p>윤아야 ___ 밥 먹자<br>how my mom would call me to the dinner table</p>-->
+  </div>
+
+  <div id="1.3a" style="display:none">
+    <p style="margin-top: 10%; margin-left: 50%;">blank</p>
+  </div>
+
+  <div id="2.1" style="display:none">
+    <a href="#" onclick="return show('2.2','2.1');" style="width: 36vw; right: 32%; bottom: 0;"><img src="https://d2w9rnfcy7mm78.cloudfront.net/23342766/original_7c21e44f71f8104b8080dc8242c82f26.jpg?1693152131?bc=0" style="width: 100%; bottom: 0;"></a>
+  </div>
+
+  <div id="2.2" style="display:none">
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/24432904/original_24ffbe9e702cabe033f1cbae0e2e4cc0.jpg?1698677131?bc=0" style="width: 36vw; right: 32%; bottom: 0; z-index: -1;">
+    <p style="margin-top: 32%; margin-left: 50%;">the rock towers my cousins and i built with our 할머니 &#127014;<br>it was the last family reunion we ever did in the states<br>our <span title="할머니 and 할아버지" style="cursor: help;">grandparents</span> are now too old for the 12 hour flight</p>
+    <p style="margin-left: 50%; margin-top: 2%;">i remember how <a href="#" onclick="return show('1.1','2.2');" style="position: relative;">warm</a> these rocks in hawaii felt<br><br>i remember wondering what 할머니 &#127014; was <a href="#" onclick="return show('2.3','2.2');" style="position: relative;">feeling</a></p>
+  </div>
+
+  <div id="2.3" style="display:none">
+    <a href="#" onclick="return show('2.4','2.3');" style="width: 36vw; right: 32%; bottom: 0;"><img src="https://d2w9rnfcy7mm78.cloudfront.net/24433637/original_b5f36ab89870b65a4beb48ea5c0c9b46.jpg?1698679358?bc=0" style="width: 100%; bottom: 0;"></a>
+  </div>
+
+  <div id="2.4" style="display:none">
+    <p style="margin-left: 30%; margin-top: 30%;">there is so much that is said ___ in nothingness<br><br>but when i feel the pressure in my chest _ the tears starting to swell _ i know <br>my heart can hear the unspoken words <br>my 할머니 &#127014; says<br><br>i hear the <a href="#" onclick="return show('root','2.4');" style="position:relative;">cicadas</a> hum and nothing else</p>
+    <a href="#" onclick="return show('2.5','2.4');" style="left: 55%; bottom: 15%;">paju</a>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/24961400/original_7d950b44f9546e0dcbb70505f2f54534.jpg?1701213757?bc=0" style="width: 25%; left: 0; top: 10%;">
+  </div>
+
+  <div id="2.5" style="display:none">
+    <p style="margin-top: 10%;">i remember this day spent in paju very vividly<br>it was my first time ever&emsp;&emsp;visiting this quiet northern city&emsp;&emsp;everywhere i could see soft green<br>we ___ my mom, <span title="aunts" style="cursor: help;">이모s</span>, 할머니 &#127014;, and i ___ got out of the car and started walking&emsp;&emsp;it was a vast plain<br>i remember wondering to myself why we were here</p>
+    <a href="#" onclick="return show('2.6','2.5');" style="width: 100%; left: 0; bottom: 0;"><img src="https://d2w9rnfcy7mm78.cloudfront.net/24960525/original_fc968aeeffef9404509330397d518b97.jpg?1701210156?bc=0" style="width: 50%; bottom: 0; left: 0;"></a>
+  </div>
+
+  <div id="2.6" style="display:none">
+    <p style="margin-top: 10%; margin-left: 55%;">i asked my mom<br>she said<br><br>this is where they chose their burial site to be</p>
+    <p style="margin-left: 85%;">what do you mean?</p>
+    <p style="margin-left: 55%;"><span title="grandpa" style="cursor: help;">할아버지</span>, <span title="your aunts" style="cursor: help;">이모</span>, and 할머니 &#127014; will be buried here<br><br><br><br><br>together</p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/24960525/original_fc968aeeffef9404509330397d518b97.jpg?1701210156?bc=0" style="width: 50%; bottom: 0; left: 0;">
+    <a href="#" onclick="return show('2.7','2.6');" style="width: 100%; left: 0; bottom: 0;"><img src="https://d2w9rnfcy7mm78.cloudfront.net/24960525/original_fc968aeeffef9404509330397d518b97.jpg?1701210156?bc=0" style="width: 50%; bottom: 0; right: 0; -webkit-transform: scaleX(-1); transform: scaleX(-1);"></a>
+  </div>
+
+  <div id="2.7" style="display:none">
+    <p style="position: absolute; bottom: 1%; left: 55%;">i looked down &emsp;&emsp;at the dirt below my feet&emsp;&emsp;and began to cry</p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/24960904/original_8a9bd1130e5a7fffe67fa274e55b9f2d.jpg?1701211593?bc=0" style="width: 50%; top: 0; right: 0; -webkit-transform: scaleY(-1); transform: scaleY(-1);">
+  </div>
+
+  <div id="3.1" style="display:none">
+    <p style="margin-left: 10%; margin-top: 10%;">somewhere in downtown philadelphia<br>philly 할머니 &#x1F028; owned a store for many many years<br><br>named judy wig since she mostly sold wigs amongst other random items like toiletries and digimon cards &emsp;&emsp;and since the english name she chose for herself was judy<br><br>we have no photos of this place<br>perhaps because nobody thought to take them <br>it wasn't somewhere she nor my grandpa nor my dad really wanted to remember i think</p>
+    <a href="#" onclick="return wigWindow();" style="position:absolute; width:100%; bottom:10%; left:0;"><img src="https://d2w9rnfcy7mm78.cloudfront.net/23443710/original_c0aa68708718d932ac7073c40034a6b8.jpg?1693752909?bc=0" style="height: 45vh; left: 60%; bottom: 20%;"></a>
+  </div>
+
+  <div style="display:none">
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/23502069/original_10580485501e5f112c7fd283bfcca5a9.jpg?1694042679?bc=0" style="height: 40vh; right: 0; top: 0;">
+    <p style="margin-top: 15%; margin-left: 15%;">이곳은 이런 의미였어</p>
+  </div>
+
+  <div id="1.2c.1" style="display:none">
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/24029302/original_ee0dea8a330ba369012816d0cce7a599.jpg?1696635021?bc=0" style="width: 25%; bottom: 0; right: 0;">
+    <p style="margin-top: 8%;">___ shame<br><br>&emsp;&emsp;the shell i wear&emsp;&emsp;&emsp;on my back<br><br>&emsp;&emsp;without it &emsp;&emsp;&emsp;i ___ am a slug&emsp;&emsp;&emsp;&emsp;with it ________ a snail <br><br> &emsp;&emsp;in either case &emsp;&emsp;i feel<br><br>___ slimy<br></p>
+    <p style="margin-left: 30%; margin-top: 5%;"><br><br>my skin&emsp;&emsp;&emsp;what is meant to protect me from the outer world&emsp;&emsp;&emsp;is raw and&emsp;&emsp;<a href="#" onclick="return show('1.2c.2','1.2c.1');" style="position:relative;">sensitive</a></p>
+  </div>
+
+  <div id="1.2c.2" style="display:none">
+    <p style="margin-left: 10%; margin-top: 10%;"><span title="mom" style="cursor: help;">엄마 </span>___ she never meant it ___ meanly ____ maliciously<br>a mother's love ____ can be hard to understand ____ from the receiving end<br>there's an element of ___ religious guilt too __________ that shame<br><br>your body is a temple ___ she would say<br>___ i know</p>
+    <a href="#" onclick="return show('1.2c.2a','1.2c.2');" style="left: 10%; top: 45%;">my body</a>
+    <a href="#" onclick="return show('1.2c.2b','1.2c.2');" style="left: 10%; top: 48%;">god</a>
+    <p id="hgs" onmousedown="mouseDown()" onmouseup="mouseUp()">hot girl summer</p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/23964015/original_789bfb17f197d2bb15685b4c5b766a05.jpg?1696346846?bc=0" id="hgsShow">
+  </div>
+
+  <div id="1.2c.2a" style="display:none">
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/24029662/original_b14aaee5ed8358d8bff45a39f4bbd67d.jpg?1696637686?bc=0" style="left: 0; width: 35%; bottom: 0;">
+    <p style="text-align: right; margin-top: 10%; margin-right: 2%;">my body ____ where<br>i am ___ the subject ___ and the witness<br>the police and ___ the prisoner<br><br>performing on a tightrope ____ for nobody but myself ____ in a short skirt ____ thick makeup my <a href="#" onclick="return show('1.2c.2','1.2c.2a');" style="position: relative;">mom</a> hates<br>a clown ____ failing at this performance ____ nobody asked of me</p>
+    <p style="text-align: center; margin-top: 7%;">my body feels ____ as if it is not _______ mine</p>
+    <a href="#" onclick="return show('1.2c.2a.1','1.2c.2a');" style="bottom: 36%; left: 5%;">a shell ____ of a body</a>
+  </div>
+
+  <div id="1.2c.2a.1" style="display:none">
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/23989871/original_d58c5a859669f2d6ab6c71570066b57d.jpg?1696439538?bc=0" style="width: 30%; right: 0; top: 0;">
+    <p style="margin-left: 10%; margin-top: 20%;">elementary school ____ sixth grade ____ it's recess<br>we're the big dogs of the playground ____ thinking we had the world figured out ____ just because we were the oldest grade there<br><br>i overhear a conversation<br>have u guys heard about ____ the word _________ banana<br>someone replies ____ um yeah ____ the fruit?<br>__________ yes duh but i mean like ____ how asian kids are _____ bananas ________ you know like...... yellow on the outside but ______________ white on the inside?</p>
+    <a href="#" onclick="return show('1.2c.2a.1b','1.2c.2a.1');" style="bottom: 30%; right: 24%;">mutant</a>
+    <a href="#" onclick="return show('1.2c.2a.1a','1.2c.2a.1');" style="bottom: 26%; right: 24%;">lyricism of the white suburb</a>
+  </div>
+
+  <div id="1.2c.2a.1b" style="display:none">
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/24029538/original_8ba45f454a8702429af9c634042d73da.jpg?1696636963?bc=0" style="width: 100%; top: 0; left: 0; z-index: -1;">
+    <p>mutant ____ a state of being<br><br>somewhere between ____ what i 'should be' _____ and _____ what i am<br><br><br>divorced from myself ___ within myself<br><br><br><br><span style="color: white;">i can feel the gap ___ growing ____ between my skin and my soul ___ my peel and my flesh ___ my <a href="#" onclick="return show('1.2c','1.2c.2a.1b');" style="position: relative;">tongue</a> and my likeness</span></p>
+    <a href="#" onclick="return show('1.2c.2a.1b.2','1.2c.2a.1b');" style="top: 25%;">invasive species</a>
+  </div>
+
+  <div id="1.2c.2a.1b.2" style="display:none">
+    <p style="position: absolute; right: 0; z-index: 1;">if i am of ___ the mutated generation<br>they would have you believe ___ my parents are ___ the invasive species<br>at least that's how it felt ___ looking into their gaze that whispered ___ you shouldn't be here __________ </p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/24356327/original_ce3abc544148a851a77787ff594a579f.jpg?1698249022?bc=0" style="height: 100%; left: 0; bottom: 0;">
+    <a href="#" onclick="return show('1.2c.2a.1b.2a','1.2c.2a.1b.2');" style="right: 5%; top: 25%;">fight</a>
+    <a href="#" onclick="return show('1.2c.2a.1b.2b','1.2c.2a.1b.2');" style="right: 5%; top: 28%;">avoid</a>
+    <a href="#" onclick="return show('1.2c.2a.1b.2c','1.2c.2a.1b.2');" style="right: 5%; top: 31%;">close eyes</a>
+  </div>
+
+  <div id="hgsImage">
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/23972579/original_3ab4905656dd7e9a58b9483380ac005e.jpg?1696374342?bc=0" style="height: 60%; right: 10%; bottom: 0;">
+  </div>
+
+  <div id="1.2c.2a.1a" style="display:none">
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/23993755/original_c6261f4d9f30062a06335a6e4c95bfe1.jpg?1696451004?bc=0" style="right: 0; width: 40%; bottom: 0;">
+  </div>
+
+  <div id="1.2c.2a.1b.2c" style="display:none">
+    <p>i think of the glass counter that offered no barricade to the robber's advances<br>nowhere to hide ___ to run<br>the gun pointed straight at her frail body<br>her delicate <a href="#" onclick="return show('1.2c.2a.1b.2d','1.2c.2a.1b.2c');" style="position: relative;">hands</a> trembling in the air<br>as she held them there<br><a href="#" onclick="return show('1.2c.2a.1b.2c.2','1.2c.2a.1b.2c');" style="position: relative;"><i>ding</i></a></p>
+  </div>
+
+  <div id="1.2c.2a.1b.2d" style="display:none">
+    <p>it was my philly 할머니 &#x1F028; who taught me how to paint my nails 'prettily'<br>예쁘게 as she said</p>
+    <p>it was one of those days ___ in my hazy childhood memory<br>sitting at the back of her store ___ painting my nails with expired nailpolish that never sold ___ it had a thin layer of dust over its glass bottle ___ perhaps sitting on the <a href="#" onclick="return show('1.2c.2a.1b.2c','1.2c.2a.1b.2d');" style="position: relative;">counter</a> for years ___ untouched</p>
+  </div>
+
+  <div id="1.2c.2a.1b.2c.2" style="display:none">
+    <p>the cash register's mouth opens<br>agape ___ the cash extracted ___ the coins untouched<br>between her life and the dimes left behind<br>i wonder what you were more thankful for philly 할머니 &#x1F028;</p>
+    <a href="#" onclick="return show('3.1','1.2c.2a.1b.2c.2');" style="right: 7%; bottom: 15%;">judy wig</a>
+  </div>
+
+  <div id="navGraph" style="display:none">
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/24439196/original_32380c434e12354c3a48366bf2ff4f65.jpg?1698693704?bc=0" style="width: 100%; left: 0; top: 0;">
+  </div>
+
+  <script>
+    function show(shown, hidden) {
+      document.getElementById(shown).style.display = "block";
+      document.getElementById(hidden).style.display = "none";
+      return false;
+    }
+
+    function mouseDown() {
+      document.getElementById("hgs").style.color = "black";
+      document.getElementById("hgsImage").style.display = "block";
+      document.getElementById("hgs").style.cursor = "grabbing";
+    }
+
+    function mouseUp() {
+      document.getElementById("hgs").style.color = "blue";
+      document.getElementById("hgsImage").style.display = "none";
+      document.getElementById("hgs").style.cursor = "grab";
+    }
+
+    function mapWindow() {
+      var myWindow = window.open("https://d2w9rnfcy7mm78.cloudfront.net/24439196/original_32380c434e12354c3a48366bf2ff4f65.jpg?1698693704?bc=0", "navigation graph", "width=325,height=1000");
+      myWindow.document.body.style.background = white;
+    }
+
+    function wigWindow() {
+      var myWindow = window.open("https://d2w9rnfcy7mm78.cloudfront.net/24961055/original_bfa6e11701730da3c6bd572a3cd09e69.jpg?1701212308?bc=0", "judy wig", "width=400,height=363,top=0,left=1050");
+      myWindow.document.body.style.background = white;
+    }
+  </script>
+</body>
+
+</html>
